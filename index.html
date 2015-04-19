@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>responsiveEm</title>
+        <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+        <script type="text/javascript" src="js/jquery.responsiveEm.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('body').responsiveEm({
+                    maxFontSize: 20,
+                    /*minFontSize: 10,*/
+                    point_1: {
+                        windowWidth: 1800,
+                        fontSize: 22
+                    },
+                    point_2: {
+                        windowWidth: 300,
+                        fontSize: 8
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <pre style="height: 1000px; font-size: 4em">
+            <span>Helo</span>
+                <span>world</span>
+            </pre>
+        </div>
+    </body>
+</html>
