@@ -17,7 +17,7 @@
             var options = $.extend({}, defaults, params);
             var currentWidth, currentFont, extendFont;
             function fontCalculate(){
-                currentWidth = screen.width;
+                currentWidth = /*screen.width*/ $(window).width();
                 currentFont = (currentWidth - options.point_1.windowWidth) * (options.point_2.fontSize - options.point_1.fontSize) / (options.point_2.windowWidth - options.point_1.windowWidth) + options.point_1.fontSize;
                 if (options.maxFontSize === false) {
                     if (options.minFontSize === false) {
@@ -44,7 +44,8 @@
                         extendFont = options.maxFontSize;
                     }
                 }
-                console.log(extendFont);
+//                console.log(currentWidth);
+//                console.log(extendFont);
                 $this.css({
                     'font-size': extendFont
                 });
